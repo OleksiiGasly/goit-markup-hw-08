@@ -1,0 +1,31 @@
+.footer__button {
+  display: inline-flex;
+  color: $white;
+  background-color: $accent;
+  width: 200px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  justify-content: center;
+  align-items: center;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  padding: 10px;
+  cursor: pointer;
+
+  @media screen and (max-width: $tablet-max) {
+    margin-top: 20px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-left: 12px;
+  }
+}
+
+.send-icon {
+  fill: currentColor;
+  margin-left: 10px;
+}

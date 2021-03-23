@@ -1,0 +1,56 @@
+.join {
+  @media screen and (max-width: $mobile-max) {
+    margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: $tablet) {
+    margin-left: 70px;
+  }
+
+  &__title {
+    font-style: inherit;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-align: center;
+    text-transform: uppercase;
+    color: $white;
+
+    @media screen and (min-width: $desktop) {
+      text-align: start;
+    }
+  }
+
+  &__list {
+    display: flex;
+    margin-top: 20px;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: 10px;
+  }
+
+  &__social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    border: none;
+    width: 44px;
+    height: 44px;
+    color: $white;
+    border-radius: 50%;
+    background-color: $grey-link;
+    transition: background-color $transition;
+  }
+
+  &__social:hover,
+  &__social:focus {
+    background-color: $accent;
+  }
+
+  &__icon {
+    fill: currentColor;
+  }
+}

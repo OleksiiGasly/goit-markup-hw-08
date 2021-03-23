@@ -1,0 +1,50 @@
+header {
+  background-color: $white;
+  border-bottom: 1px solid $light-option-a;
+}
+
+.header {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  align-items: center;
+  height: 60px;
+
+  @media screen and (min-width: $mobile) {
+    width: $mobile;
+  }
+
+  @media screen and (min-width: $tablet) {
+    width: $tablet;
+    height: 80px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: $desktop;
+  }
+
+  &__navigation {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.menu-toggle {
+  display: flex;
+  background-color: $white;
+  border: 0px;
+  margin-left: auto;
+  fill: $black-main;
+  transition: color $transition;
+
+  &:hover,
+  &:focus {
+    color: $accent;
+  }
+
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+}

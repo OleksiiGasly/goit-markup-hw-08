@@ -1,0 +1,261 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 320px;
+  width: 100vw;
+  height: 100vh;
+  overflow-x: scroll;
+  background-color: $grey-backdrop;
+  transition: opacity $transition, visibility $transition;
+}
+
+.backdrop.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.backdrop__modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 450px;
+  width: 100%;
+  max-height: 100vh;
+  overflow-y: scroll;
+  background-color: $white;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  transition: transform $transition;
+
+  @media screen and (min-width: $desktop) {
+    max-width: 528px;
+    overflow-y: auto;
+  }
+}
+
+.is-hidden .backdrop__modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.5);
+}
+
+.backdrop__close {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: $black;
+  background-color: $white;
+  height: 30px;
+  width: 30px;
+  border: 1px solid $grey-modal;
+  border-radius: 50%;
+}
+
+.backdrop__close-icon {
+  fill: currentColor;
+  transition: fill $transition;
+
+  .backdrop__close:hover &,
+  .backdrop__close:focus & {
+    fill: $accent;
+  }
+}
+
+.form {
+  padding: 40px;
+
+  &__title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.15;
+    text-align: center;
+    color: $black-main;
+    margin-bottom: 12px;
+  }
+
+  &__field {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+
+  &__icon {
+    position: absolute;
+    display: flex;
+    height: 18px;
+    width: 18px;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    bottom: 0;
+    margin-left: 12px;
+    transform: translateY(-11px);
+    color: $black-main;
+    background-color: inherit;
+  }
+
+  &__svg {
+    fill: currentColor;
+    transition: fill $transition;
+  }
+
+  &__label {
+    margin-bottom: 4px;
+    font-size: 12px;
+    line-height: 1.167;
+    letter-spacing: 0.01em;
+  }
+
+  &__input {
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    padding-left: 42px;
+    border-radius: 4px;
+    transition: border $transition;
+  }
+
+  &__field:focus-within > &__input {
+    border: 1px solid $accent;
+    outline: none;
+  }
+
+  &__field:focus-within > &__label {
+    @media screen and (max-width: $mobile-max) {
+      color: $accent;
+    }
+  }
+
+  &__field:focus-within &__svg {
+    fill: $accent;
+  }
+}
+
+.comment {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+
+  &__label {
+    margin-bottom: 4px;
+    font-size: 12px;
+    line-height: 1.167;
+    letter-spacing: 0.01em;
+  }
+
+  &__textarea {
+    resize: none;
+    font-family: $font-kit;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.01em;
+    color: $black;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    box-sizing: border-box;
+    border-radius: 4px;
+    padding: 12px 16px;
+    transition: border $transition;
+
+    @media screen and (min-width: $desktop) {
+      font-size: 12px;
+    }
+  }
+
+  &__textarea::placeholder {
+    font-family: $font-kit;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.01em;
+    color: $grey-placeholder;
+
+    @media screen and (min-width: $desktop) {
+      font-size: 12px;
+    }
+  }
+
+  &__textarea:focus-within {
+    border: 1px solid $accent;
+    outline: none;
+  }
+}
+
+.policy {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+
+  &__checkbox {
+    appearance: none;
+    position: absolute;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $accent;
+  }
+
+  &__icon {
+    display: inline-block;
+    width: 16px;
+    height: 15px;
+    margin-right: 8px;
+    background-color: $white;
+    background-image: url(../images/check-none.svg);
+    border-radius: 4px;
+  }
+
+  &__text {
+    @media screen and (max-width: $tablet-max) {
+      font-size: 12px;
+      line-height: 1.17;
+    }
+  }
+
+  &__checkbox:checked &__icon {
+    display: none;
+  }
+
+  &__checkbox:checked + &__icon {
+    background-color: $accent;
+    background-image: url(../images/check-filled.svg);
+    background-size: contain;
+    background-origin: border-box;
+  }
+}
+
+.backdrop__submit {
+  display: flex;
+  color: $white;
+  background-color: $accent;
+  width: 200px;
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  justify-content: center;
+  letter-spacing: 0.06em;
+  text-decoration: none;
+  border-radius: 4px;
+  border: 1px solid transparent;
+  padding: 10px;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  transition: background-color $transition;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-saturated;
+  }
+}

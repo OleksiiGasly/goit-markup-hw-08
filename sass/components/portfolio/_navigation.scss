@@ -1,0 +1,24 @@
+.portfolio__navigation {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-top: -8px;
+  margin-bottom: 40px;
+
+  @media screen and (min-width: $tablet) {
+    margin-bottom: 30px;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 50px;
+  }
+}
+
+.portfolio__selector {
+  margin-top: 8px;
+}
+
+.portfolio__selector:not(:last-child) {
+  margin-right: 8px;
+}

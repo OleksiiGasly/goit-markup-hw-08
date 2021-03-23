@@ -1,0 +1,68 @@
+.hero {
+  text-align: center;
+  height: 400px;
+  overflow: hidden;
+
+  @media screen and (min-width: $desktop) {
+    height: 600px;
+  }
+
+  &__overlay {
+    max-width: $mobile-max;
+    height: 400px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 118px;
+    background-image: linear-gradient($hero-gradient, $hero-gradient),
+      url(../images/hero.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-color: $dark;
+
+    @media screen and (min-width: $tablet) {
+      max-width: $tablet-max;
+    }
+
+    @media screen and (min-width: $desktop) {
+      padding-top: 200px;
+      max-width: 1600px;
+      height: 600px;
+    }
+  }
+
+  &__title {
+    color: $white;
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 1.62;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    margin-right: auto;
+    margin-left: auto;
+
+    @media screen and (min-width: $desktop) {
+      font-weight: 900;
+      font-size: 44px;
+      line-height: 1.36;
+    }
+  }
+
+  &__button {
+    display: inline-block;
+    color: $white;
+    background-color: $accent;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.87;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-decoration: none;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    padding: 10px 32px;
+    margin-top: 30px;
+    cursor: pointer;
+  }
+}

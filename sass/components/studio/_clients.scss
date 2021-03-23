@@ -1,0 +1,91 @@
+.clients {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  @media screen and (min-width: $desktop) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+
+  &__container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: auto;
+    margin-left: auto;
+
+    @media screen and (min-width: $mobile) {
+      width: $mobile;
+    }
+
+    @media screen and (min-width: $tablet) {
+      width: $tablet;
+    }
+
+    @media screen and (min-width: $desktop) {
+      width: $desktop;
+    }
+  }
+
+  &__title {
+    color: $black-main;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 1.17;
+    text-align: center;
+    margin-bottom: 30px;
+
+    @media screen and (min-width: $desktop) {
+      font-size: 36px;
+      margin-bottom: 50px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+
+  &__item {
+    margin: 15px;
+
+    @media screen and (max-width: 767px) {
+      width: calc((100% - 2 * 30px) / 2);
+    }
+
+    @media screen and (min-width: $tablet) {
+      width: calc((100% - 3 * 30px) / 3);
+    }
+
+    @media screen and (min-width: $desktop) {
+      width: calc((100% - 6 * 30px) / 6);
+    }
+  }
+}
+
+.clients_link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  height: 90px;
+  color: $grey-option;
+  border: 1px solid $grey-option;
+  border-radius: 4px;
+  transition: border $transition;
+
+  &:hover,
+  &:focus {
+    border: 1px solid $accent;
+  }
+
+  .clients__icon {
+    fill: currentColor;
+    transition: fill $transition;
+  }
+
+  &:hover .clients__icon,
+  &:focus .clients__icon {
+    fill: $accent;
+  }
+}

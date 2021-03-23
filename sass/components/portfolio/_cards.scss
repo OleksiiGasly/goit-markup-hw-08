@@ -1,0 +1,92 @@
+.portfolio__set {
+  @media screen and (min-width: $tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -15px;
+  }
+}
+
+.portfolio__item {
+  border: 1px solid $light-option-b;
+  transition: box-shadow $transition;
+
+  @media screen and (min-width: $tablet) {
+    width: calc((100% - 2 * 30px) / 2);
+    margin: 15px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    width: calc((100% - 3 * 30px) / 3);
+  }
+
+  &:hover,
+  &focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+}
+
+.portfolio__item:not(:first-child) {
+  @media screen and (max-width: 767px) {
+    margin-top: 30px;
+  }
+}
+
+.card__thumb {
+  position: relative;
+  overflow: hidden;
+}
+
+.card__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $accent-transparent;
+  transform: translateY(101%);
+  transition: transform $transition;
+}
+
+.card__text {
+  color: $white;
+  margin: 24px;
+  font-size: 18px;
+  line-height: 1.56;
+}
+
+.portfolio__item:hover .card__overlay {
+  transform: translateY(0);
+}
+
+.card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+
+  &__content {
+    background-color: $white;
+    padding: 20px 24px;
+    // border: 1px solid $light-option-b;
+    // border-top: hidden;
+  }
+
+  &__name {
+    color: $black-main;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    text-decoration: none;
+    margin-bottom: 4px;
+  }
+
+  &__group {
+    font-size: 16px;
+    line-height: 1.87;
+    text-decoration: none;
+  }
+}
