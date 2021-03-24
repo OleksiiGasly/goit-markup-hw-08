@@ -2,6 +2,8 @@
   text-align: center;
   height: 400px;
   overflow: hidden;
+  min-width: 320px;
+}
 
   @media screen and (min-width: $desktop) {
     height: 600px;

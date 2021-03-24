@@ -1,16 +1,17 @@
 header {
   background-color: $white;
   border-bottom: 1px solid $light-option-a;
-}
 
-.header {
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-  display: flex;
-  align-items: center;
-  height: 60px;
+  .header {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    display: flex;
+    align-items: center;
+    height: 60px;
+    min-width: 320px;
+  }
 
   @media screen and (min-width: $mobile) {
     width: $mobile;
