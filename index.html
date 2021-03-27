@@ -132,15 +132,51 @@
           <h2 class="operations__title">Чем мы занимаемся</h2>
           <ul class="operations__list">
             <li class="operations__item">
-              <img src="./images/pc.jpg" alt="pc" width="370" />
+              <div class="operations__thumb">
+                <img
+                  srcset="
+                  ./images/pc.jpg 1x,
+                  ./images/pc-x2.jpg 2x
+                  "
+                  src="./images/pc.jpg"
+                  alt="pc"
+                  width="370"
+                  class="operations__image"
+                  loading="lazy"
+                />
+              </div>
               <p class="operations__overlay">десктопные приложения</p>
             </li>
             <li class="operations__item">
-              <img src="./images/laptop.jpg" alt="laptop" width="370" />
+              <div class="operations__thumb">
+                <img
+                  srcset="
+                  ./images/laptop.jpg 1x,
+                  ./images/laptop-x2.jpg 2x
+                  "
+                  src="./images/laptop.jpg"
+                  alt="laptop"
+                  width="370"
+                  class="operations__image"
+                  loading="lazy"
+                />
+              </div>  
               <p class="operations__overlay">мобильные приложения</p>
             </li>
             <li class="operations__item">
-              <img src="./images/tablet.jpg" alt="tablet" width="370" />
+              <div class="operations__thumb">
+                <img
+                  srcset="
+                  ./images/tablet.jpg 1x,
+                  ./images/tablet-x2.jpg 2x
+                  "
+                  src="./images/tablet.jpg"
+                  alt="tablet"
+                  width="370"
+                  class="operations__image"
+                  loading="lazy"
+                />
+              </div>
               <p class="operations__overlay">дизайнерские решения</p>
             </li>
           </ul>
@@ -251,7 +287,7 @@
               </div>
             </li>
             <li class="team__item">
-              <div class="team__thumb"></div>
+              <div class="team__thumb">
                 <img
                   srcset="
                   ./images/nikolai-tarasov-x1.jpg 1x,
@@ -263,6 +299,7 @@
                   class="team__image"
                   loading="lazy"                  
                 />
+              </div>
               <div class="team__member">
                 <h3 class="team__name">Николай Тарасов</h3>
                 <p class="team__position">Marketing</p>
@@ -483,7 +520,7 @@
       </button>
       <ul class="menu-container__navigation">
         <li class="menu-container__item">
-          <a href="./index.html"  class="menu-container__page">Студия</a>
+          <a href="./index.html"  class="menu-container__page-current">Студия</a>
         </li>
         <li class="menu-container__item">
           <a href="./portfolio.html" class="menu-container__page">Портфолио</a>

@@ -206,8 +206,8 @@
 
   &__icon {
     display: inline-block;
-    width: 16px;
-    height: 15px;
+    min-width: 16px;
+    min-height: 15px;
     margin-right: 8px;
     background-color: $white;
     background-image: url(../images/check-none.svg);
@@ -228,7 +228,7 @@
   &__checkbox:checked + &__icon {
     background-color: $accent;
     background-image: url(../images/check-filled.svg);
-    background-size: contain;
+    // background-size: contain;
     background-origin: border-box;
   }
 }
